@@ -1,0 +1,136 @@
+1.What is the Collection framework in Java?
+
+ans. Collection Framework is a combination of classes and interface, which is used to store and manipulate
+the data in the form of objects. It provides various classes such as ArrayList, Vector, Stack, and HashSet, etc.
+and interfaces such as List, Queue, Set, etc. for this purpose.
+
+2. what is difference between  ArrayList and LinkedList?
+
+ans. 
+ArrayList  = 
+-> it uses a dynamic array.
+-> it is not efficient for manipulation because too much is required.
+-> it is better to store and fetch data.
+-> ArrayList provides random access.
+-> ArrayList takes less memory overhead as it stores only object.
+
+LinkedList
+-> LinkedList uses a doubly linked list.
+-> it is efficient for manipulation.
+-> it does not provide random access.
+-> it takes more memory overhead,as it stores the object as well as the address of that object.
+
+3.what is the difference between iterator and listiterator?
+
+ans. 
+iterator
+-> The iterator traverses the elements in the forward direction only.
+-> The iterator can be used in the list,set, and queue.
+-> The iterator can only perform a remove operation while traversing the collection.
+
+listiterator 
+-> Listiterator traverses the elements in the backward and forward directions both.
+-> Listiterator can be used in list only.
+-> Listiterator can perform ?add,? ?remove,? and?set? operation while traversing the collection.
+
+
+4.What is the difference between iterator and Enumeration?
+
+ans.
+
+iterator
+
+-> The iterator can traverse legacy and non-legacy elements.
+-> The iterator is fail-fast.
+-> The iterator is slower than Enumeration.
+-> The iterator can perform a remove operation while traversing the collection.
+
+Enumeration
+
+-> Enumeration can traverse only legacy elements.
+-> Enumeration is not fail-fast.
+-> Enumeration is faster than iterator.
+-> Enumeration can perform only traverse operation on the collection.
+
+5. What is the difference between List and Set?
+
+ans.The List and Set both extend the collection interface. However, there are some differences between the
+two which are listed below`
+-> The List can contain duplicate elements whereas Set includes unique items`
+-> The List is an ordered collection which maintains the insertion order whereas Set is an unordered
+collection which does not preserve the insertion order`
+-> The List interface contains a single legacy class which is Vector class whereas the Set interface does not
+have any legacy class`
+-> The List interface can allow a number of null values whereas Set interface only allows a single null value.
+
+
+6. What is the difference between HashSet and TreeSet?
+
+ans. Both HashSet and TreeSet are implementations of the Set interface in Java, but they have some
+differences in terms of their properties and usage{
+-> Ordering: HashSet is an unordered collection of elements, while TreeSet is a sorted set of elements based
+on their natural order or a custom comparatorU
+ Duplication: HashSet does not allow duplicate elements, while TreeSet does not allow duplicates as wellU
+
+-> Implementation: HashSet is implemented using a hash table, while TreeSet is implemented using a self-
+balancing binary search tree (Red-Black tree)U
+
+-> Performance: HashSet has constant-time complexity O(1) for adding, removing, and testing the existence
+of an element, while TreeSet has a logarithmic-time complexity O(log n) for these operations due to the
+self-balancing propertyU
+-> Memory usage: HashSet uses less memory than TreeSet because it only stores the elements, while
+TreeSet stores additional information for maintaining the orderU
+-> Iteration: HashSet provides no guarantees regarding the order of iteration, while TreeSet guarantees the
+elements are iterated in sorted orderU
+-> Usage: HashSet is suitable when ordering is not important, and fast access and membership tests are
+needed. TreeSet is suitable when elements need to be sorted or accessed in a specific order.
+
+
+7. What is the difference between Array and ArrayList?
+
+ans.Both arrays and ArrayLists are used to store collections of elements in Java, but they have some
+differences in terms of their properties and usage{
+-> Type: Arrays can store elements of primitive data types as well as objects, while ArrayList can only store
+objectsU
+-> Size: The size of an array is fixed once it is created, while the size of an ArrayList can be dynamically
+increased or decreased by adding or removing elementsU
+-> Mutability: Arrays are mutable, meaning that you can modify the elements in an array after it has been
+created. ArrayList is also mutable, but the only way to modify it is by adding, removing or modifying
+elementsU
+-> Performance: Arrays have better performance than ArrayLists for certain operations, such as accessing
+elements by index, because they are implemented as a continuous block of memory. ArrayLists, on the
+other hand, use dynamic memory allocation and are implemented as a dynamic array, which may result
+in more memory overhead and slower performance for certain operationsU
+-> Methods: Arrays have a limited set of methods compared to ArrayLists, which provides more methods for
+manipulating the collection, such as adding, removing, and sorting elementsU
+-> Initialization: Arrays can be initialized with values at the time of creation, while ArrayList requires the use of
+methods to add elements to the collectionU
+-> Compatibility: Arrays are compatible with traditional for-loops and can be easily passed to other
+methods, while ArrayList requires the use of a special for-each loop and may require more code to be
+passed to other methods.
+
+8. What is JDBC in Java?
+
+ans.JDBC(Java Database Connectivity) is a Java API, which is helpful in interaction with the database to
+retrieve, manipulate and process the data using SQL. It will make use of JDBC drivers for connecting with the
+database. By using JDBC, we can access tabular data stored in various types of relational databases such as
+Oracle, MySQL, MS Access, etc.
+
+9. What is DriverManager in JDBC?
+
+-> JDBC DriverManager is a static class in Java, through which we manage the set of JDBC drivers that are
+available for an application to use.
+->Multiple JDBC drivers can be used concurrently by an application, if necessary. By using a Uniform
+Resource Locator(URL), each application specifies a JDBC driverG
+->When we load the JDBC Driver class into an application, it registers itself to the DriverManager by using
+Class.forName() or DriverManager.registerDriver(). To check this, you can have a look into the source code
+of JDBC Driver classes. After this, when we call DriverManager.getConnection() method by passing the
+details regarding database configuration, DriverManager will make use of registered drivers to obtain the
+connection and return it to the caller program.
+
+
+10. Which data types are used for storing the image and file in the database table?
+
+-> BLOB data type is used to store the image in the database. We can also store videos and audio by using
+the BLOB data type. It stores the binary type of dataG
+-> CLOB data type is used to store the file in the database. It stores the character type of data.
